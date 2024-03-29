@@ -1,0 +1,13 @@
+1. Incorrect Parameters in Map.set(): When registering a user, the parameters are reversed. The correct usage is this.users.set(userId, username);.
+
+2. Mismatched Types: The authorId in the Post interface is defined as a string, but it is assigned a number in the createPost method. The authorId type should be consistent. Changing the Post interface to have authorId: number would resolve this.
+
+3. Equality Check: In findPost, using == for comparison might work but isn't best practice for TypeScript where === is preferred for strict equality checks to avoid type coercion issues.
+
+4. Type Mismatch in Comparison: In editPost and deletePost, there's a comparison between userId (number) and authorId (string, as originally defined). This error stems from the initial type mismatch and should be resolved by correcting the authorId type in the Post interface.
+
+5. Logic and Error Handling: While not a syntactical error, the code does not handle cases where operations fail due to logic errors, such as trying to delete a non-existent post or edit a post as a non-author. The error messages are there, but real-world applications might require more robust handling (e.g., throwing exceptions, error codes).
+
+
+
+

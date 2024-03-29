@@ -1,0 +1,5 @@
+1. Type Check Error in addUser Method: In the addUser method, there's a condition that checks if both id and name are of type number, which is incorrect since name should be of type string. The correct condition should check if id is a number and name is a string.
+
+2. Inconsistent Return Type in getUser Method: The getUser method is supposed to return a user object of type { id: number; name: string }. However, if the user is not found, it implicitly returns undefined which is not mentioned in the method's return type. To fix this, the return type should be modified to include undefined.
+
+3. Strict Equality Comparison: In the getUser method, the equality comparison (==) between user.id and id might not be strict enough for certain coding standards which prefer strict equality (===) to avoid unexpected type coercion.

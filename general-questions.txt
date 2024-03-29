@@ -1,0 +1,5 @@
+3. What are the basic types available in TypeScript?
+2. Can you explain what is meant by "TypeScript is a superset of JavaScript"?
+7. How do you define and use a function in TypeScript?
+13. What are access modifiers and how do they work in TypeScript?
+14. Discuss Abstract classes and their purposes in TypeScript.

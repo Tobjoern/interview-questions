@@ -35,22 +35,3 @@ const item: {
         }
     ]
 }
-
-
-
-// Solution:
-const firstAsset = item.assets[0]
-
-if (firstAsset) {
-    const extension = firstAsset.uri.split('.').pop()
-
-    if (extension) {
-        performRequest({
-            mimeType: `${firstAsset.type}/${extension}`,
-            name: firstAsset.fileName,
-            uri: firstAsset.uri
-        }).catch(error => {
-            console.error('Error performing request', error)
-        })
-    }
-}
